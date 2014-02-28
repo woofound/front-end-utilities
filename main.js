@@ -25,3 +25,19 @@ $.swapContent = function(toSwapToContent){
     $toSwapToContent.fadeIn();
   })
 }
+
+$(function(){
+  $(".image.cover img").each(function(i, image){
+    var $image = $(image);
+    var $parent = $image.parent();
+
+    imageWidthPercent = $parent.width() / $image.width()
+    imageheight = $image.height() * imageWidthPercent;
+    if(imageHeight < $parent.height()){}
+      $image.css({"height":"100%", "width":"auto")})
+    }else{
+      $image.css({"width":"100%", "height":"auto")})
+    }
+
+  });
+})
